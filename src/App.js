@@ -1,28 +1,21 @@
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import Home from './Home';
+import Cart from './Components/Cart';
+import { CartProvider } from 'react-use-cart';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+    <CartProvider>
+    <Home/>
+    <Cart/>
+    </CartProvider>
+
+
+    </>
+   
   );
 }
 
